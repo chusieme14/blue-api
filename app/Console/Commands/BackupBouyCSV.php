@@ -53,7 +53,7 @@ class BackupBouyCSV extends Command
 
             fclose($output);
 
-            // BouyData::where('device_id', $id)->where('is_backup', 0)->update(['is_backup' => 1]);
+            BouyData::where('device_id', $id)->where('is_backup', 0)->update(['is_backup' => 1]);
 
             // Upload to FTP
             // Storage::disk('ftp')->put("backup_csv/{$filename}", file_get_contents($csvPath));
