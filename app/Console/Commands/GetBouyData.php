@@ -40,7 +40,7 @@ class GetBouyData extends Command
         $total_page = ceil($total_data/10);
 
         for ($i=1; $i <= $total_page; $i++) {
-            $datas = Http::get('http://44.245.234.197:4321/export_data/?user_id=1286&user_mobile=%2B33603328977&skip=' . $skip . '&limit=' . $limit);
+            $datas = Http::timeout(1800)->get('http://44.245.234.197:4321/export_data/?user_id=1286&user_mobile=%2B33603328977&skip=' . $skip . '&limit=' . $limit);
             foreach ($datas->json()['data'] as $key => $data) {
                 
                 $data['transmit_time'] = Carbon::parse($data['transmit_time']);
