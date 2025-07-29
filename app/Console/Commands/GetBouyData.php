@@ -31,7 +31,7 @@ class GetBouyData extends Command
     public function handle()
     {
         $limit = 10;
-        $response = Http::get('http://44.245.234.197:4321/export_data/?user_id=1286&user_mobile=%2B33603328977&skip=0&limit=' . $limit);
+        $response = Http::timeout(1800)->get('http://44.245.234.197:4321/export_data/?user_id=1286&user_mobile=%2B33603328977&skip=0&limit=' . $limit);
         // $pagination_data = DB::table('paginations')->select('skip')->first();
         $skip = 0;
         $counter = 0;
