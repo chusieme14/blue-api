@@ -44,7 +44,7 @@ class BackupFile extends Command
         $ftp_host = env('FTP_HOST');
         $ftp_user = env('FTP_USERNAME');
         $ftp_pass = env('FTP_PASSWORD');
-
+        dd($ftp_host);
         $fp = fopen($localFilePath, 'r');
 
         $ch = curl_init();
