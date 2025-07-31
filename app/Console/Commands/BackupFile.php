@@ -41,10 +41,10 @@ class BackupFile extends Command
         // $localFilePath = public_path('csv/buoy_2251_06.csv');
         // $remoteFilePath = 'buoy_2251_06.csv';
 
-        $ftp_host = '51.44.37.11';
-        $ftp_user = 'haliopftp';
-        $ftp_pass = 'X7pL9qT2m';
-        
+        $ftp_host = config('app.ftp_host');
+        $ftp_user = config('app.ftp_username');
+        $ftp_pass = config('app.ftp_password');
+
         $fp = fopen($localFilePath, 'r');
 
         $ch = curl_init();

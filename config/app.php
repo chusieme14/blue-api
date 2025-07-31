@@ -27,6 +27,9 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
+    'ftp_host' => env('FTP_HOST', '51.44 .37 .11'),
+    'ftp_username' => env('FTP_USERNAME', 'haliopftp'),
+    'ftp_password' => env('FTP_PASSWORD', 'X7pL9qT2m'),
 
     /*
     |--------------------------------------------------------------------------
