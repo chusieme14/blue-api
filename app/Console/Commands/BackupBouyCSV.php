@@ -67,9 +67,9 @@ class BackupBouyCSV extends Command
         // $localFilePath = public_path('csv/buoy_2251_06.csv');
         // $remoteFilePath = 'buoy_2251_06.csv';
 
-        $ftp_host = env('FTP_HOST');
-        $ftp_user = env('FTP_USERNAME');
-        $ftp_pass = env('FTP_PASSWORD');
+        $ftp_host = '51.44.37.11';
+        $ftp_user = 'haliopftp';
+        $ftp_pass = 'X7pL9qT2m';
 
         $fp = fopen($localFilePath, 'r');
 

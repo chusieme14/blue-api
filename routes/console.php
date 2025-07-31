@@ -11,3 +11,7 @@ use Illuminate\Support\Facades\Schedule;
 Schedule::command('app:get-bouy-data')
     ->daily()
     ->runInBackground();
+
+Schedule::command('app:backup-file')
+    ->dailyAt('03:00')
+    ->runInBackground();
